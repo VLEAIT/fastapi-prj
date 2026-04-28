@@ -8,11 +8,11 @@ class BookCreate(BaseModel):
     title:str=Field(min_length=1,max_length=100)
     author:str
     pages:int=Field(gt=0)
-    price:int=Field(ge=0)
+    price:int=Field(ge=0)   
     description:Optional[str]=None
 
 class BookResponse(BookCreate):
-    id:int
+    id:   
     model_config={"from_attributes":True}
 
 class BookUpdate(BaseModel):
